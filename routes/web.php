@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/{id}', function ($id) {
+    return $id;
+});
+Route::get('/contact/form/aboutus', array('as' => "contact", function() {
+
+        $url = route('contact');
+
+        return $url;
+}));
