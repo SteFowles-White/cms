@@ -14,12 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/{id}', function ($id) {
-    return $id;
-});
-Route::get('/contact/form/aboutus', array('as' => "contact", function() {
+// Route::get('/{id}', function ($id) {
+//     return $id;
+// });
+// Route::get('/contact/form/aboutus', array('as' => "contact", function() {
 
-        $url = route('contact');
+//         $url = route('contact');
 
-        return $url;
-}));
+//         return $url;
+// }));
+
+
+// This line allows the url /post to acess the POSTCONTROLLER controller in the controlers file
+// and enable acess to the index method (becasue of the @index)
+
+
+// You can pass permaniters via the route and then in the index method add the $id to the index() method
+Route::get('/post/{id}', 'PostController@index');

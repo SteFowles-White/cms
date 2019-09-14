@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+// TO CREATE A CONTROLLER USE THE BELOW COMMAND IN TERMINAL
+// php artisan make:controller --resource PostController
+
+
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
