@@ -31,7 +31,7 @@ Route::get('/', function () {
 
 // You can pass permaniters via the route and then in the index method add the $id to the index() method
 // Route::get('/post/{id}', 'PostController@index');
-Route::get('/post/{id}/{name}', 'PostController@show_post');
+Route::get('/post', 'PostController@show_post');
 Route::get('/blog/{title}/{subtitle}/{content}', 'PostController@blog');
 Route::get('/contact', 'PostController@contact');
 
