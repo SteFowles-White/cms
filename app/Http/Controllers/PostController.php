@@ -81,4 +81,21 @@ class PostController extends Controller
     {
         //
     }
+
+    public function contact(){
+        return view('contact');
+    }
+
+// By using thecompact function in the return you are able to pass as many variables to the 
+// view as is needed. this is the more effeicent way to do this.
+
+
+    public function show_post($id, $name){
+        // return view('post')-> with ('id', $id);
+        return view('post', compact('id', 'name'));
+    }
+    public function blog($title, $subtitle, $content){
+        // return view('post')-> with ('id', $id);
+        return view('blog', compact('title', 'subtitle', 'content'));
+    }
 }

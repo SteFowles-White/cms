@@ -30,11 +30,14 @@ Route::get('/', function () {
 
 
 // You can pass permaniters via the route and then in the index method add the $id to the index() method
-Route::get('/post/{id}', 'PostController@index');
+// Route::get('/post/{id}', 'PostController@index');
+Route::get('/post/{id}/{name}', 'PostController@show_post');
+Route::get('/blog/{title}/{subtitle}/{content}', 'PostController@blog');
+Route::get('/contact', 'PostController@contact');
 
 
 // This type of Route allow you to acess all the controller methods without the need to us use @
 // To see the formate of each of these type in terminal php artisan route:list
 
-Route::resource('posts', 'PostController');
+// Route::resource('posts', 'PostController');
 Route::resource('gotta/{message}', 'Postcontroller2');
