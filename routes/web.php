@@ -37,3 +37,4 @@ Route::get('/post/{id}', 'PostController@index');
 // To see the formate of each of these type in terminal php artisan route:list
 
 Route::resource('posts', 'PostController');
+Route::resource('gotta/{message}', 'Postcontroller2');
